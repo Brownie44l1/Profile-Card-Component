@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans";
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: hsl(185, 75%, 39%);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-top {
+    position: fixed;
+    top: -30vmin;
+    left: -30vmin;
+    width: 100vmin;
+    height: 100vmin;
+}
+
+.bg-bottom  {
+    position: fixed;
+    bottom: -30vmin;
+    right: -30vmin;
+    width: 100vmin;
+    height: 100vmin;
+}
+
+.card {
+    position: relative;
+    width: 370px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.card .header {
+    height: 150px;
+    background: no-repeat;
+    background-size: cover; 
+}
+
+.card .avatar {
+    background: no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    width: 100px;
+    height: 100px;
+    margin: -30px auto;
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin: 15px 0 3px;
+}
+
+.card h3 span {
+    color: hsl(0, 0%, 59%);
+    margin-left: 3px;
+    font-weight: 300;
+}
+
+.card .p {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    color: hsl(0, 0%, 59%);
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px 30px;
+    margin: 50px 0 5px;
+    border-top: 1px solid hsl(227, 10%, 46%);
+}
+
+.stats .followers, .likes, .photos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats .followers h2, .likes h2, .photos h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.stats .followers p, .likes p, .photos p {
+    font-size: 15px;
+    font-weight: 400;
+    color: hsl(0, 0%, 59%);
+}
+
+@media (width <= 400px) {
+    .card {
+        width: 340px;
+    }
+    .stats {
+        padding: 5px 40px 30px;
+    }
+}
